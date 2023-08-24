@@ -31,6 +31,9 @@ cpu_usage = psutil.cpu_percent(interval=1)
 # Load the .env file
 load_dotenv()
 
+
+disc_key = os.getenv("DISC_TOKEN")
+
 # Specify the API key and headers
 api_key = os.getenv("GPT4_API_KEY")
 print(f'Bearer {api_key}')
@@ -228,4 +231,4 @@ async def cpu(ctx):
     await ctx.send("\nCPU usage: %f%%" % cpu_usage)
     await ctx.send("Total: %d GB, Used: %d GB, Free: %d GB" % (total_GB, used_GB, free_GB))
 
-bot.run('MTEyNDE1MjAxNTI5NjEzOTI2NA.GQyRIQ.2PExhR1_5tdF1zxHPFSCzcw-78vff77v2Hb_XA')
+bot.run(disc_key)

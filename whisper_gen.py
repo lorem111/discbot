@@ -24,4 +24,3 @@ def make_whisper():
     utility.tprint(transcript)
     return(transcript)
 
-make_whisper()
